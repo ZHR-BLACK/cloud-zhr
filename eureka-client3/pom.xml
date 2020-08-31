@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eureka-client2</artifactId>
+    <artifactId>eureka-client3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-client2</name>
+    <name>eureka-client3</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,7 +25,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--spring cloud发布服务多用rest风格，所以需要spring-bootweb包-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

@@ -1,12 +1,12 @@
 # 设置的eureka端口号
 server:
-  port: 9300
+  port: 9302
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 spring:
   application:
-    name: eureka-client
+    name: eureka-client3
 

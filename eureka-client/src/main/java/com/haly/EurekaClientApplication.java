@@ -15,10 +15,10 @@ import org.springframework.web.client.RestTemplate;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-public class SpringcloudEurekaClientApplication {
+public class EurekaClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudEurekaClientApplication.class, args);
+        SpringApplication.run(EurekaClientApplication.class, args);
     }
 
     //向spring里注入一个RestTemplate对象
