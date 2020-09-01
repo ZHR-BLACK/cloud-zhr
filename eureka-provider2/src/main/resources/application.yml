@@ -1,15 +1,14 @@
 # 设置的eureka端口号
 server:
-  port: 8761
+  port: 8762
 eureka:
   instance:
     hostname: localhost
-    instance-id: provider8761
+    instance-id: provider8762
     prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
-
 spring:
   application:
     name: eureka-provider

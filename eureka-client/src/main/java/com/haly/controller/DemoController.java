@@ -24,7 +24,7 @@ public class DemoController {
          * paras：参数
          * resutType：返回值类型
          */
-        String url = "http://localhost:8761/getInfo";
+        String url = "http://eureka-provider/getInfo";
         HttpMethod type = HttpMethod.GET;
         RequestEntity<String> paras = null;
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, type, paras, String.class);

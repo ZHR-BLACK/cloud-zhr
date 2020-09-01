@@ -1,0 +1,38 @@
+server:
+  # 服务端口号
+  port: 8085
+spring:
+  application:
+    # 服务名称 - 服务之间使用名称进行通讯
+    name: zuul
+
+eureka:
+  client:
+    service-url:
+      # 填写注册中心服务器地址
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    instance-id: zuul8085
+    prefer-ip-address: true
+    hostname: localhost
+
+zuul:
+  routes:
+    # 设置服务a 路径名称 随便起
+    service-a:
+      path: /service-a/**
+      # 这里写a服务的注册名字
+      serviceId: clientService
+    # 设置服务b 路径名称 随便起
+    service-b:
+      path: /service-b/**
+      # 这里写b服务的注册名字
+      serviceId: eureka-client2
+
+ribbon:
+  eureka:
+    enabled: false
+
+clientService:
+  ribbon:
+    listOfServers: 127.0.0.1:9300,127.0.0.1:9301
