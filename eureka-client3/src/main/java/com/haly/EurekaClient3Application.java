@@ -2,7 +2,9 @@ package com.haly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,14 +17,17 @@ import org.springframework.web.client.RestTemplate;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-public class SpringcloudEurekaClientApplication {
+@EnableFeignClients
+public class EurekaClient3Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudEurekaClientApplication.class, args);
+        SpringApplication.run(EurekaClient3Application.class, args);
     }
 
     //向spring里注入一个RestTemplate对象
     @Bean
+    //负载均衡注解
+    @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }

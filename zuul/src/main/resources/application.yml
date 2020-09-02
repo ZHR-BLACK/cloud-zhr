@@ -33,6 +33,7 @@ ribbon:
   eureka:
     enabled: false
 
+# ¶Ôeureka-client¶Ë×ö¸ºÔØ
 clientService:
   ribbon:
     listOfServers: 127.0.0.1:9300,127.0.0.1:9301
