@@ -1,15 +1,13 @@
 server:
-  # ����˿ں�
   port: 8085
+
 spring:
   application:
-    # �������� - ����֮��ʹ�����ƽ���ͨѶ
     name: zuul
 
 eureka:
   client:
     service-url:
-      # ��дע�����ķ�������ַ
       defaultZone: http://localhost:8080/eureka
   instance:
     instance-id: zuul8085
@@ -18,15 +16,11 @@ eureka:
 
 zuul:
   routes:
-    # ���÷���a ·������ �����
     service-a:
       path: /service-a/**
-      # ����дa�����ע������
       serviceId: clientService
-    # ���÷���b ·������ �����
     service-b:
       path: /service-b/**
-      # ����дb�����ע������
       serviceId: eureka-client2
 
 ribbon:

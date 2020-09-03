@@ -32,11 +32,11 @@ public class TokenFilter extends ZuulFilter {
     }
 
     /**
-     * 是否开启过滤
+     * todo 是否开启过滤,这里为修改点
      */
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
 
     /**

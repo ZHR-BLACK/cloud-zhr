@@ -18,6 +18,11 @@ eureka:
 spring:
   application:
     name: eureka-client
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: root
 
 #feigh自带断路器,但是默认是没有打开的
 feign:

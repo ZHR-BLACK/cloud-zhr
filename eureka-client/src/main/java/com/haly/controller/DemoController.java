@@ -15,15 +15,15 @@ public class DemoController {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * exchange(url,type,paras,resutType)
+     * url：请求地址
+     * type：请求类型 get,post
+     * paras：参数
+     * resutType：返回值类型
+     */
     @RequestMapping("/test1")
     public String getEurekaServiceInfo() {
-        /**
-         * exchange(url,type,paras,resutType)
-         * url：请求地址
-         * type：请求类型 get,post
-         * paras：参数
-         * resutType：返回值类型
-         */
         String url = "http://eureka-provider/getInfo";
         HttpMethod type = HttpMethod.GET;
         RequestEntity<String> paras = null;
@@ -34,7 +34,7 @@ public class DemoController {
     @RequestMapping("/test2")
     public String getString1() {
         //getForObject 调用无参方法，返回结果为String的方法
-        String url = "http://localhost:8761/getInfo";
+        String url = "http://eureka-provider/getInfo";
         String res = restTemplate.getForObject(url, String.class);
         return res;
     }
@@ -42,7 +42,7 @@ public class DemoController {
     @RequestMapping("/test3")
     public String getString2() {
         //getForObject 调用有参方法，路径添加参数。返回结果为String的方法
-        String url = "http://localhost:8761/getString?userId=sn001";
+        String url = "http://eureka-provider/getString?userId=sn001";
         String res = restTemplate.getForObject(url, String.class);
         return res;
     }
@@ -54,7 +54,7 @@ public class DemoController {
         user.setUserId(1);
         user.setUserName("zsc");
         user.setPassword("123");
-        String url = "http://localhost:8761/getUser";
+        String url = "http://eureka-provider/getUser";
         //User u=restTemplate.getForObject(url,User.class,user);
         User u = restTemplate.postForObject(url, user, User.class);
         return u;

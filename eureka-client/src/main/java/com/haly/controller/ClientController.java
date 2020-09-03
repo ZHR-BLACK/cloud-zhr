@@ -31,7 +31,7 @@ public class ClientController {
 
     @GetMapping("/helloworld")
     public String helloWorld() {
-        return restTemplate.getForEntity("http://eureka-provider/hello",String.class).getBody();
+        return restTemplate.getForEntity("http://eureka-provider/hello", String.class).getBody();
     }
 
 
