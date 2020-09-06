@@ -4,7 +4,8 @@ server:
 #应用名称，配置文件名，此时:congif-server-dev.yml
 spring:
   application:
-    name: config-client8061
+    # 对应config-client下配置文件config-client-dev.yml的前缀config-client,否则会获取不到
+    name: config-client
   cloud:
     config:
       discovery:
@@ -19,10 +20,8 @@ spring:
 eureka:
   instance:
     secure-port-enabled: false
-    instance-id: config-client8061
+    instance-id: config-client
     prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://eureka8080.com:8080/eureka/
-
-env: NaN
