@@ -2,21 +2,21 @@ package com.haly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author ZHR
  * @version 1.0
- * @ClassName EurekaConfigApplication
+ * @ClassName ConfigServerApplication
  * @Date 2020-08-31 18:13
  * @description 启动类
  **/
-@EnableEurekaServer
+@EnableConfigServer
 @SpringBootApplication
-public class EurekaConfigApplication {
+public class ConfigServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaConfigApplication.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 
 }

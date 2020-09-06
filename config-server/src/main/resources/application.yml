@@ -1,0 +1,17 @@
+# 设置的eureka端口号
+server:
+  port: 8060
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ZHR-BLACK/cloud-zhr.git
+          timeout: 15
+#          username: 1271035116@qq.com
+#          password: zhang1012jing
+
+
