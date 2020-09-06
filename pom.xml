@@ -4,6 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>eureka-server</module>
+        <module>eureka-server1</module>
+        <module>eureka-server2</module>
+        <module>eureka-config</module>
         <module>eureka-provider</module>
         <module>eureka-provider2</module>
         <module>eureka-client</module>

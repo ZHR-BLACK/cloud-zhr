@@ -17,17 +17,13 @@ public interface StudentService {
 
     /**
      * 获取所有学生列表
-     *
-     * @return
      */
     @GetMapping(value = "/myfeign/student")
     String getAllStudent();
 
     /**
      * 添加学生
-     *
      * @param student
-     * @return
      */
     @PostMapping(value = "/myfeign/student")
     String saveStudent(@RequestBody Student student);

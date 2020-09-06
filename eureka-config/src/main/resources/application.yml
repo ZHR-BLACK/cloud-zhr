@@ -1,0 +1,16 @@
+# 设置的eureka端口号
+server:
+  port: 8060
+
+spring:
+  application:
+    name: eureka-config
+  cloud:
+    config:
+      server:
+        git:
+          url: https://github.com/ZHR-BLACK/cloud-zhr.git
+          username: 1271035116@qq.com
+          password: zhang1012jing
+
+

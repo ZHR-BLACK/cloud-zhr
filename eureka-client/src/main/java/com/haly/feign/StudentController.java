@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  * @ClassName StudentController
  * @Date 2020-09-01 15:09
- * @description 对feign调用
+ * @description 使用feign调用
  **/
 @RestController
 public class StudentController implements StudentService{

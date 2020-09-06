@@ -12,7 +12,7 @@ eureka:
   instance:
     instance-id: zuul8085
     prefer-ip-address: true
-    hostname: localhost
+    hostname: zuul8085
 
 zuul:
   routes:
@@ -22,11 +22,14 @@ zuul:
     service-b:
       path: /service-b/**
       serviceId: eureka-client2
+  # 表示不能再使用这个路径直接访问了，只能通过zuul访问
+  ignored-services: *
 
 ribbon:
   eureka:
     enabled: false
 
+# 配置多个clinet消费端，对多个消费端做负载均衡
 clientService:
   ribbon:
     listOfServers: 127.0.0.1:9300,127.0.0.1:9301

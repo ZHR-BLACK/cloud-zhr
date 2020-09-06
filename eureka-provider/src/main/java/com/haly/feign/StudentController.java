@@ -17,7 +17,7 @@ public class StudentController implements StudentService {
 
     @Autowired
     @Qualifier("iStudentServiceImp")
-    StudentService studentService;
+    private StudentService studentService;
 
     @Override
     public String getAllStudent() {

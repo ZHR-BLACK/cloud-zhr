@@ -17,14 +17,4 @@ public class ZuulApplication {
         SpringApplication.run(ZuulApplication.class, args);
     }
 
-    // 实例化tokenfilter,否则网管不生效
-    @Bean
-    TokenFilter tokenFilter() {
-        return new TokenFilter();
-    }
-
-    @Bean
-    OrderRateLimiterFilter orderRateLimiterFilter() {
-        return new OrderRateLimiterFilter();
-    }
 }

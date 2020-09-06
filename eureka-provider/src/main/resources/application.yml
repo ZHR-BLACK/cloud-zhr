@@ -3,7 +3,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: localhost
+    hostname: provider8761.com
     instance-id: provider8761
     prefer-ip-address: true
     # 心跳间隔，5秒
@@ -12,16 +12,23 @@ eureka:
     lease-expiration-duration-in-seconds: 10
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://eureka8080.com:8080/eureka/,http://eureka8081.com:8081/eureka/,http://eureka8082.com:8082/eureka/
     # 定时刷新本地缓存时间
     registry-fetch-interval-seconds: 5
 
 spring:
   application:
     name: eureka-provider
+  # 整合rabbitMq配置
   rabbitmq:
     host: localhost
     port: 5672
     username: root
     password: root
+# info配置
+info:
+  app.name: cloud-zhr-provider
+  company.name: zhr
+
+
 

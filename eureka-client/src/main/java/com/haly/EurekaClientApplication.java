@@ -1,5 +1,7 @@
 package com.haly;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -11,24 +13,18 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author ZHR
  * @version 1.0
- * @ClassName SpringcloudEurekaClientApplication
+ * @ClassName EurekaClientApplication
  * @Date 2020-08-31 18:16
  * @description 启动类
  **/
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients // 开启feign
 public class EurekaClientApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 
-    //向spring里注入一个RestTemplate对象
-    @Bean
-    //负载均衡注解
-    @LoadBalanced
-    public RestTemplate getRestTemplate(){
-        return new RestTemplate();
-    }
+
 }
