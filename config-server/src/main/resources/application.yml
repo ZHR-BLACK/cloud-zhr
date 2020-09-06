@@ -1,6 +1,16 @@
 # 设置的eureka端口号
 server:
   port: 8060
+eureka:
+  instance:
+    secure-port-enabled: false
+    instance-id: config-server
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8080.com:8080/eureka/
 
 spring:
   application:
@@ -11,7 +21,5 @@ spring:
         git:
           uri: https://github.com/ZHR-BLACK/cloud-zhr.git
           timeout: 15
-#          username: 1271035116@qq.com
-#          password: zhang1012jing
 
 
