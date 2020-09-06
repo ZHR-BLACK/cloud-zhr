@@ -1,1 +1,1 @@
-dev: config-server-dev
+env: config-server-dev

@@ -7,8 +7,6 @@ eureka:
     instance-id: config-server
     prefer-ip-address: true
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
       defaultZone: http://eureka8080.com:8080/eureka/
 
@@ -19,7 +17,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ZHR-BLACK/cloud-zhr.git
+          uri: https://github.com/ZHR-BLACK/cloud-zhr
+          username:
+          password:
           timeout: 15
+          search-paths: config-center
 
 

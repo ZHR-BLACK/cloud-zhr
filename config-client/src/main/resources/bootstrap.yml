@@ -1,0 +1,24 @@
+#应用名称，配置文件名，此时:congif-server-dev.yml
+spring:
+  application:
+    name: config-client8061
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        # config server 的服务id
+        service-id: config-server
+      # 环境
+      profile: dev
+      # 分支
+      label: master
+      name: config-server-dev.yml
+
+eureka:
+  instance:
+    secure-port-enabled: false
+    instance-id: config-client8061
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8080.com:8080/eureka/

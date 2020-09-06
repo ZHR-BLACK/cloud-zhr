@@ -1,1 +1,1 @@
-prod: config-server-prod
+env: config-server-prod
