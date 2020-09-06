@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @Value("${env}")
-    private String env;
+    String env;
     @Value("${server.port}")
-    private String port;
+    String port;
 
     @RequestMapping("/config")
     public String getConfigMsg() {

@@ -1,3 +1,6 @@
+# 设置的eureka端口号
+server:
+  port: 8061
 #应用名称，配置文件名，此时:congif-server-dev.yml
 spring:
   application:
@@ -12,7 +15,6 @@ spring:
       profile: dev
       # 分支
       label: master
-      name: config-server-dev.yml
 
 eureka:
   instance:
@@ -22,3 +24,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka8080.com:8080/eureka/
+
+env: NaN

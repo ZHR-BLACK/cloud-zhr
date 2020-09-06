@@ -1,5 +1,0 @@
-# 设置的eureka端口号
-server:
-  port: 8061
-
-
