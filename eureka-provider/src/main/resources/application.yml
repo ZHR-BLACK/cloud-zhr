@@ -25,6 +25,18 @@ spring:
     port: 5672
     username: root
     password: root
+  datasource:
+    url: jdbc:mysql://localhost:3306/self?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    # 这里不能用data-username,否则会连接mysql报错
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+################mapper文件位置################
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
 # info配置
 info:
   app.name: cloud-zhr-provider

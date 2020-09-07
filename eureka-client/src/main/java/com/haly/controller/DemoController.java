@@ -51,9 +51,9 @@ public class DemoController {
     public User getUser() {
         //参数为实体类对象，返回结果为实体类对象
         User user = new User();
-        user.setUserId(1);
-        user.setUserName("zsc");
-        user.setPassword("123");
+        user.setId(1);
+        user.setName("zsc");
+        user.setAge(50);
         String url = "http://eureka-provider/getUser";
         //User u=restTemplate.getForObject(url,User.class,user);
         User u = restTemplate.postForObject(url, user, User.class);

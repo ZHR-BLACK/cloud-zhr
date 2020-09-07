@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haly.dao.UserRepository">
+    <!-- CodeBuilder Generated -->
+    <resultMap id="UserMap" type="com.haly.bean.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="amount" property="amount" jdbcType="DECIMAL"/>
+        <result column="trans_date" property="trans_date" jdbcType="DATE"/>
+        <result column="bank_no" property="bank_no" jdbcType="VARCHAR"/>
+    </resultMap>
+
+   <sql id="Base_List">
+    id,name,age,amount,trans_date,bank_no
+  </sql>
+
+    <select id="getList" resultMap="UserMap">
+        select
+            <include refid="Base_List"></include>
+        from user
+        where age = 50;
+    </select>
+
+</mapper>
