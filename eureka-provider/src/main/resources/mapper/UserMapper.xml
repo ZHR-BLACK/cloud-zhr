@@ -11,8 +11,9 @@
         <result column="bank_no" property="bank_no" jdbcType="VARCHAR"/>
     </resultMap>
 
+<!-- sql片段-->
    <sql id="Base_List">
-    id,name,age,amount,trans_date,bank_no
+        id,name,age,amount,trans_date,bank_no
   </sql>
 
     <select id="getList" resultMap="UserMap">

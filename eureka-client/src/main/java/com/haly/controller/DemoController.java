@@ -55,7 +55,6 @@ public class DemoController {
         user.setName("zsc");
         user.setAge(50);
         String url = "http://eureka-provider/getUser";
-        //User u=restTemplate.getForObject(url,User.class,user);
         User u = restTemplate.postForObject(url, user, User.class);
         return u;
     }
